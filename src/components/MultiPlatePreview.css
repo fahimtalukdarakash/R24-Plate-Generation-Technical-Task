@@ -1,0 +1,30 @@
+/* Preview viewport box (height varies with screen) */
+@media (max-width: 575.98px) {
+  .preview-box { height: 260px; min-height: 260px; max-height: 260px; overflow: hidden; }
+}
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .preview-box { height: 300px; min-height: 300px; max-height: 300px; overflow: hidden; }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .preview-box { height: 360px; min-height: 360px; max-height: 310px; overflow: hidden; }
+}
+@media (min-width: 1200px) {
+  .preview-box { height: 420px; min-height: 420px; max-height: 420px; overflow: hidden; }
+}
+
+/* Laptop-height variants (preserve your fine-tuning) */
+@media (min-width: 992px) and (max-height: 799.98px) {
+  .preview-box { height: 300px; min-height: 300px; max-height: 280px; overflow: hidden; }
+}
+@media (min-width: 992px) and (min-height: 800px) and (max-height: 899.98px) {
+  .preview-box { height: 330px; min-height: 330px; max-height: 330px; overflow: hidden; }
+}
+@media (min-width: 992px) and (min-height: 900px) and (max-height: 999.98px) {
+  .preview-box { height: 360px; min-height: 360px; max-height: 360px; overflow: hidden; }
+}
+@media (min-width: 992px) and (min-height: 1000px) and (max-height: 1199.98px) {
+  .preview-box { height: 390px; min-height: 390px; max-height: 390px; overflow: hidden; }
+}
+
+/* Tile container (used when mirroring) */
+.plate-image { display: flex; }

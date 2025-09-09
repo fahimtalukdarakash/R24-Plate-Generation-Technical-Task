@@ -1,0 +1,264 @@
+/* Row container */
+.plate-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #f2f2f2;
+  margin: 16px 0;
+}
+
+/* Index badge (default) */
+.plate-index {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  background: #f9fafb;
+  color: #000;
+  cursor: grab;
+}
+.plate-index-dark {
+  background: #000;
+  color: #fff;
+  border: none;
+}
+
+/* Inline inputs container */
+.plate-inline-inputs {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+/* Field block */
+.plate-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.field-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 6px;
+}
+.plate-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+.plate-range {
+  font-size: 8px;
+  color: #6b7280;
+}
+
+/* Wrapper around input + unit */
+.input-wrap {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 4px 8px;           /* default spacing (overridden in breakpoints) */
+  border: 1px solid #d1d5db;  /* restore your original framed look */
+  border-radius: 5px;
+}
+
+/* Input itself uses the underline visual exactly like before */
+.plate-field input {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  width: 80px;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.plate-field .unit {
+  font-size: 13px;
+  color: #555;
+  margin-left: 4px;
+}
+
+.times {
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+}
+
+/* Hints / errors */
+.error-text {
+  font-size: 12px;
+  color: #ef4444;
+  margin-top: 2px;
+}
+.mm-hint {
+  text-align: center;
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 6px;
+  width: 100%;
+}
+
+/* Remove button */
+.btn-remove {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fda5a6;
+  color: rgb(255, 0, 0);
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1%;
+  transition: all 0.3s ease;
+}
+.btn-remove:hover:not(.disabled) {
+  background: #ef4444;
+  color: #fff;
+  transform: scale(1.05);
+}
+.btn-remove.disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+}
+
+/* ===== Small phones: corner badges & fab remove within card corners ===== */
+@media (width<350px){
+  .plate-row--corners {
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 14px;
+    background: #f6f6f7;
+  }
+
+  .plate-corner-badge {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 8px;
+    cursor: grab;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08);
+  }
+  .plate-corner-badge:not(.plate-index-dark) {
+    background: #fff;
+    color: #000;
+    border: 1px solid #d1d5db;
+  }
+
+  .btn-remove-fab {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 28px;
+    height: 28px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 50%;
+    border: none;
+    background: #ffd5d6;
+    color: #e11d48;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08);
+    transition: transform .15s ease, background .15s ease;
+  }
+}
+@media (min-width : 350px) and (max-width : 530px) {
+  .plate-row--corners {
+    position: relative;
+    padding: 18px 48px;
+    border-radius: 14px;
+    background: #f6f6f7;
+  }
+
+  .plate-corner-badge {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 8px;
+    cursor: grab;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08);
+  }
+  .plate-corner-badge:not(.plate-index-dark) {
+    background: #fff;
+    color: #000;
+    border: 1px solid #d1d5db;
+  }
+
+  .btn-remove-fab {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 28px;
+    height: 28px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 50%;
+    border: none;
+    background: #ffd5d6;
+    color: #e11d48;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,.08);
+    transition: transform .15s ease, background .15s ease;
+  }
+}
+
+/* ===== Tablet (768–991) tighten spacing ===== */
+@media (min-width: 768px) and (max-width: 991px) {
+  .input-wrap { padding: 4px 45px; }
+  .plate-row { gap: 45px; padding: 10px 34px; }
+}
+
+/* ===== Small tablets (531–767) ===== */
+@media (min-width: 531px) and (max-width: 767px) {
+  .input-wrap { padding: 4px 35px; }
+  .plate-index { width: 30px; height: 30px; font-size: 13px; }
+}
+
+/* ===== Desktop compact (992–1199) ===== */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .input-wrap { padding: 1px 2px; }
+  .plate-inline-inputs { gap: 8px; }
+  .plate-field .unit { margin: 0; font-size: 10px; }
+  .plate-row { gap: 5px; padding: 5px 7px; }
+  .plate-index { width: 30px; height: 30px; font-size: 13px; }
+  .plate-field input { width: 65px; }
+  .plate-label { font-size: 10px; font-weight: 800; }
+}
+
+/* ===== Desktop medium (1200–1399) ===== */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .plate-field .unit { margin: 0; font-size: 10px; }
+  .plate-field input { width: 65px; }
+  .plate-index { width: 30px; height: 30px; font-size: 13px; }
+}

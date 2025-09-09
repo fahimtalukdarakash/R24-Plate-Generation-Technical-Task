@@ -1,0 +1,8 @@
+.motif-uploader {
+  margin-top: 35px;
+}
+
+/* Small phones: keep your offset tweak */
+@media (width <= 530px) {
+  .motif-uploader { top: -35px; }
+}
