@@ -154,11 +154,9 @@ src/
     MotifUploader.css
 
     PlateListDnd.jsx
-    PlateListDnd.css             # (optional – can be empty for now)
 
     PlateItem.jsx
     PlateItem.css
 
-    // Optional/legacy (keep if you use them)
-    PlateMeta.jsx                 # read-only details for a single plate (optional)
+    PlateMeta.jsx                 # read-only details for a single plate
 ```
